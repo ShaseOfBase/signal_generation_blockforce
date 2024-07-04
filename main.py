@@ -1,61 +1,60 @@
-import logging
+from pathlib import Path
+import tomllib
 import time
 import traceback
 
 from config import RESEARCH_PG_URI, SLACK_CHANNEL
-from strategy_clients.big_bend_client import SignalGeneratorBigBend
-from strategy_clients.data_client import DataClient
-from strategy_clients.strategy_client import StrategyClient
-from strategy_clients.models import System
+from lib.logger import setup_logging
+from lib.logger import logger
+from lib.data_client import DataClient
+from lib.strategy_client import StrategyClient
+from lib.models import System
+from strategy_clients.psar_client import SignalGeneratorPsar
 
-
-def setup_logging():
-    # Create a logger
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-
-    # Create a file handler for writing logs to a file
-    file_handler = logging.FileHandler("logs/big_bend_signal_generation.log")
-    file_formatter = logging.Formatter(
-        "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-    )
-    file_handler.setFormatter(file_formatter)
-
-    # Create a stream handler for writing logs to console
-    stream_handler = logging.StreamHandler()
-    stream_formatter = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
-    stream_handler.setFormatter(stream_formatter)
-
-    # Add both handlers to the logger
-    logger.addHandler(file_handler)
-    logger.addHandler(stream_handler)
-
-
-setup_logging()
-logger = logging.getLogger(__name__)
 
 research = System(name="research", db_url=RESEARCH_PG_URI)
 
 
-
-def main():
-
+def get_signal_generator() -> StrategyClient:
     systems = [
         research,
     ]
 
     dc = DataClient(systems=systems)
-    sc = StrategyClient(systems=systems)
-    
-    strategy_name = "Big Bend BTC"
-    big_bend_signal_generator_btc = SignalGeneratorBigBend(
-        systems=systems, strategy_name=strategy_name, data_client=dc, symbol="BTCUSDT"
+
+    # strategy_name = "Big Bend BTC"
+    # big_bend_signal_generator_btc = SignalGeneratorBigBend(
+    #     systems=systems,
+    #     strategy_name=strategy_name,
+    #     data_client=dc,
+    #     symbol="BTCUSDT",
+    # )
+
+    with open(Path("strategy_configs/psar_config.toml"), "rb") as f:
+        psar_config = tomllib.load(f)
+
+    strategy_params = psar_config["strategy"]
+
+    strategy_name = "Parabolic SAR"
+    setup_logging(strategy_name=strategy_name)
+
+    psar_signal_generator_btc = SignalGeneratorPsar(
+        systems=systems,
+        strategy_name=strategy_name,
+        data_client=dc,
+        symbol="BTCUSDT",
+        strategy_params=strategy_params,
     )
+
+    return psar_signal_generator_btc
+
+
+def generate_signals(signal_generator: StrategyClient):
+    sc = StrategyClient(systems=signal_generator.systems)
 
     while True:
         try:
-            big_bend_signal_generator_btc.generate_signal()
+            signal_generator.generate_signal()
             time.sleep(10)
         except KeyboardInterrupt:
             print("Exiting loop due to user interruption.")
@@ -63,12 +62,13 @@ def main():
         except Exception as e:
             logger.error(traceback.format_exc())
             sc.send_message(
-                "General Error", 
-                f"Error in main loop: {e}", 
+                "General Error",
+                f"Error in main loop: {e}",
                 SLACK_CHANNEL,
             )
 
+
 if __name__ == "__main__":
+    psar_signal_generator_btc = get_signal_generator()
 
-    main()
-
+    generate_signals(psar_signal_generator_btc)

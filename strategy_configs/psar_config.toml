@@ -1,0 +1,55 @@
+[strategy]
+stop_loss = 0.05
+max_trades = 4
+# ttp = 0.005                   # initial target take profit tsl_th
+ttp = 0.005
+etp = 0.002                   # trailing TP
+add_thresh = -0.008
+vol_thresh = 0.7
+rolling_ret_thresh = 0.05
+peak_valley_chg_thresh = 0.08 # the threshold for the last 24 hour peak and valley chg%; default 8%
+
+exit_on_opp_signal_only = false
+# Default is false
+# The original strategy only reverses if an opposite signal occurs and the current position is at a loss.
+# This variable allows the strategy to reverse on an opposite signal regardless of the current position's pnl.
+
+rolling_ret_period = 30           # df["rol_ret"] = df["Close"].pct_change(periods=rolling_ret_period)  
+mt_len = 43_200                   # df["mt_vol"] = df["ret"].rolling(mt_len).std() * ((365 * 24 * 60) ** 0.5)  # 30 day annualized vol
+rolling_peak_valley_period = 1440 # df["rolling_peak"] = df["Close"].rolling(rolling_peak_valley_period).max()  # last 24 hour highest high price
+
+[strategy.atr_ttp_multiplier_settings]
+periods = 18
+# The period value to run the ATR with
+atr_to_price_baseline = 0.05
+# The ratio of the ATR to the closing price that will result in a neutral TTP multiplier of 1.0. 
+boost_factor = 1.5
+# The factor that the TTP multiplier will be multiplied by.
+max_ttp = 0.015
+# Maximum TTP allowed
+
+# atr_ttp_multiplier = ( (atr / closing price) /  atr_to_price_baseline ) * boost_factor
+# adj_ttp = clamp(ttp * atr_ttp_multiplier, min_ttp, max_ttp)
+
+[strategy.trade_sizes_long]
+high_vol = [0.54, 0.00416, 0.0869, 0.0142, 0]
+low_vol = [0.5, 0.3, 0.3, 0.3, 1]
+[strategy.trade_sizes_short]
+high_vol = [0.5, 0.3, 0.3, 0.3, 1]
+low_vol = [0.5, 0.3, 0.3, 0.3, 1]
+
+
+[strategy.psar_settings.default]
+start = 0.02
+increment = 0.02
+maximum = 0.2
+
+[strategy.psar_settings.BTCUSDT]
+start = 0.04
+increment = 0.03
+maximum = 0.177
+
+[strategy.psar_settings.ETHUSDT]
+start = 0.022
+increment = 0.018
+maximum = 0.18
