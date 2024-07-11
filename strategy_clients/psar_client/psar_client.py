@@ -55,7 +55,7 @@ class SignalGeneratorPsar(StrategyClient):
         self.df_1m = self.data_client.get_historical_data(
             symbol=self.symbol,
             candle_length_minutes=1,
-            number_of_candles=45_202,  # 43_200 needed as base to establish all values, +2 gets us into signal gen territory
+            number_of_candles=43_202,  # 43_200 needed as base to establish all values, +2 makes sure we're in signal gen territory
         )
 
         data = [self.df_1m]

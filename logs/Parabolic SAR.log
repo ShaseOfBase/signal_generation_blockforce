@@ -1378,3 +1378,4 @@ The server responded with: {'ok': False, 'error': 'not_authed'}
 2024-07-11 22:36:51 - lib.data_client - INFO - Added hour datapoint
 2024-07-11 22:37:41 - lib.data_client - INFO - Initialized DB Connections
 2024-07-11 22:37:52 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:37:56 - lib.data_client - INFO - Added hour datapoint
