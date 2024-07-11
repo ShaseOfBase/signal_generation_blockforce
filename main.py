@@ -2,20 +2,22 @@ from pathlib import Path
 import tomllib
 import time
 import traceback
+import argparse
 
 from config import RESEARCH_PG_URI, SLACK_CHANNEL
+from lib.dev_mode import set_dev_mode
 from lib.logger import setup_logging
 from lib.logger import logger
 from lib.data_client import DataClient
 from lib.strategy_client import StrategyClient
 from lib.models import System
-from strategy_clients.psar_client import SignalGeneratorPsar
+from strategy_clients.psar_client.psar_client import SignalGeneratorPsar
 
 
 research = System(name="research", db_url=RESEARCH_PG_URI)
 
 
-def get_signal_generator() -> StrategyClient:
+def get_psar_signal_generator(symbol: str) -> StrategyClient:
     systems = [
         research,
     ]
@@ -30,11 +32,6 @@ def get_signal_generator() -> StrategyClient:
     #     symbol="BTCUSDT",
     # )
 
-    with open(Path("strategy_configs/psar_config.toml"), "rb") as f:
-        psar_config = tomllib.load(f)
-
-    strategy_params = psar_config["strategy"]
-
     strategy_name = "Parabolic SAR"
     setup_logging(strategy_name=strategy_name)
 
@@ -42,15 +39,13 @@ def get_signal_generator() -> StrategyClient:
         systems=systems,
         strategy_name=strategy_name,
         data_client=dc,
-        symbol="BTCUSDT",
-        strategy_params=strategy_params,
+        symbol=symbol,
     )
 
     return psar_signal_generator_btc
 
 
 def generate_signals(signal_generator: StrategyClient):
-    sc = StrategyClient(systems=signal_generator.systems)
 
     while True:
         try:
@@ -61,7 +56,7 @@ def generate_signals(signal_generator: StrategyClient):
             break
         except Exception as e:
             logger.error(traceback.format_exc())
-            sc.send_message(
+            signal_generator.send_message(
                 "General Error",
                 f"Error in main loop: {e}",
                 SLACK_CHANNEL,
@@ -69,6 +64,13 @@ def generate_signals(signal_generator: StrategyClient):
 
 
 if __name__ == "__main__":
-    psar_signal_generator_btc = get_signal_generator()
+    args = argparse.ArgumentParser()
+    args.add_argument("-dev", action="store_true")
+    args = args.parse_args()
+
+    if args.dev:
+        set_dev_mode(True)
+
+    psar_signal_generator_btc = get_psar_signal_generator(symbol="BTCUSDT")
 
     generate_signals(psar_signal_generator_btc)

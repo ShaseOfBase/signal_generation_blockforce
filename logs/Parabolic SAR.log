@@ -117,3 +117,1264 @@ connection to server at "192.168.191.178", port 5432 failed: FATAL:  password au
 
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
 
+2024-07-10 11:53:59 - lib.data_client - INFO - Initialized DB Connections
+2024-07-10 11:54:15 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-10 12:00:25 - lib.data_client - INFO - Initialized DB Connections
+2024-07-10 12:00:40 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-10 12:01:16 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 21:50:39 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 21:51:45 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 21:51:58 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 21:52:02 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 21:52:02 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:52:15 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 21:52:15 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:52:27 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 21:52:27 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:52:40 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 21:54:34 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:54:47 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:54:47 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:55:06 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+2024-07-11 21:55:06 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 21:55:06 - lib.strategy_client - INFO - Error in main loop: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+2024-07-11 21:55:07 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:07 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:09 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:55:09 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:55:12 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+2024-07-11 21:55:12 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 21:55:12 - lib.strategy_client - INFO - Error in main loop: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+2024-07-11 21:55:12 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:12 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:15 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:55:15 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:55:15 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+2024-07-11 21:55:15 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 21:55:15 - lib.strategy_client - INFO - Error in main loop: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+2024-07-11 21:55:16 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:16 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:18 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:55:18 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:55:19 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+2024-07-11 21:55:19 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 21:55:19 - lib.strategy_client - INFO - Error in main loop: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+2024-07-11 21:55:19 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:20 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:55:22 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:55:22 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:58:21 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 21:58:36 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 21:58:40 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:58:40 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 21:59:49 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+2024-07-11 21:59:49 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 21:59:49 - lib.strategy_client - INFO - Error in main loop: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+2024-07-11 21:59:49 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:59:49 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 165, in get_cleaned_psar_df
+    two_hour_candle_df = minute_candles_df.resample(f"{window}h").agg(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/resample.py", line 352, in aggregate
+    result = ResamplerWindowApply(self, func, args=args, kwargs=kwargs).agg()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['Close', 'High', 'Low', 'Open'] do not exist"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 21:59:52 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 21:59:52 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:00:53 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:01:04 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:01:08 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:01:08 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:01:21 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:01:21 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:01:34 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:01:34 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:01:47 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:01:47 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:02:00 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:02:00 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:03:15 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:03:24 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:03:28 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:03:28 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:03:41 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:03:41 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:03:54 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:03:54 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:04:07 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:04:07 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:04:37 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+2024-07-11 22:04:37 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 22:04:37 - lib.strategy_client - INFO - Error in main loop: 'High'
+2024-07-11 22:04:37 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 22:04:38 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 22:04:40 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:04:40 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:04:40 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+2024-07-11 22:04:40 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 22:04:40 - lib.strategy_client - INFO - Error in main loop: 'High'
+2024-07-11 22:04:41 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 22:04:41 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 22:04:44 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:04:44 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:04:44 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+2024-07-11 22:04:44 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-07-11 22:04:44 - lib.strategy_client - INFO - Error in main loop: 'High'
+2024-07-11 22:04:44 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 22:04:45 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'High'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 108, in generate_signal
+    signals_df = get_psar_signals_df(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 336, in get_psar_signals_df
+    processed_psar_df = get_cleaned_psar_df(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 174, in get_cleaned_psar_df
+    raw_psar_df = get_raw_psar_df(two_hour_candle_df, start, increment, maximum)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_signals.py", line 9, in get_raw_psar_df
+    high = data_df["High"]
+           ~~~~~~~^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'High'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-07-11 22:06:52 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:07:05 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:07:09 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:07:09 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:07:21 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:07:21 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:07:34 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:07:34 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:08:29 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:08:41 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:08:45 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:08:45 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:08:58 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:08:58 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:09:11 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:09:11 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:09:24 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:09:24 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:09:37 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:09:37 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:09:50 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:09:50 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:10:03 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:10:03 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:10:16 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:10:16 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:10:29 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:10:29 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:10:42 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:10:42 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:10:55 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:10:55 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:11:08 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:11:08 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:11:21 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:11:21 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:11:34 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:11:34 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:11:47 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:11:47 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:12:32 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:12:32 - lib.data_client - INFO - Data is too long removing one
+2024-07-11 22:27:34 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:27:48 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:27:52 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:28:05 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:28:18 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:28:30 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:28:34 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:28:47 - lib.data_client - INFO - Didn't add hour datapoint
+2024-07-11 22:28:59 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:36:34 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:36:47 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:36:51 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:37:41 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:37:52 - lib.data_client - INFO - Successfully Fetched Historical Data

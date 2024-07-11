@@ -1,3 +1,4 @@
+from abc import abstractmethod
 import logging
 import traceback
 import typing
@@ -10,6 +11,7 @@ from config import SLACK_TOKEN
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from lib.data_client import DataBaseClient
+from lib.dev_mode import get_dev_mode
 from lib.models import System
 
 # from trading_app_helpers.crud import crud_get_alloc
@@ -55,6 +57,14 @@ class StrategyClient(DataBaseClient):
         trade_type will be Entry Long, Entry Short, Exit Position
         """
 
+        if get_dev_mode():
+            logger.info("Signal generated, dev mode is on, logging only...")
+            logger.info(f"System: {system}")
+            logger.info(f"Strategy: {strategy_name}")
+            logger.info(f"Trade Type: {trade_type}")
+            logger.info(f"Perc Equity: {perc_equity}")
+            return
+
         url = system.trading_url
         try:
             signal = YosemiteSignalSchema(
@@ -76,12 +86,17 @@ class StrategyClient(DataBaseClient):
         self,
         strategy: str,
         msg: str,
-        channel: str,
+        channel: str | None,
     ):
         """
         :innocent_cat:
         :grimacing_cat:
         """
+
+        if not channel:
+            logger.info("No channel specified, logging msg only...")
+            logger.info(msg)
+
         internal_channel = channel
         msg = strategy + ": " + msg
         try:
@@ -101,25 +116,6 @@ class StrategyClient(DataBaseClient):
         except Exception as e:
             logger.error(traceback.format_exc())
 
-    # def get_positions(self, systems_to_check: typing.List[System], strategy: str):
-    #     positions = defaultdict(list)
-    #     for system in systems_to_check:
-    #         session = self.get_session(system.name)
-    #         for acc in system.accounts:
-    #             pos = self.check_position(
-    #                 db_session=session, account=acc, strategy=strategy
-    #             )
-    #             positions[system.name].append(pos)
-    #     return positions
-
-    # def check_position(self, db_session: Session, account: str, strategy: str) -> bool:
-    #     res = crud_get_alloc(
-    #         db_session=db_session, account_id=account, strategy=strategy
-    #     )
-    #     if res:
-    #         pos = res[0][2]
-
-    #     if not res or pos is None:
-    #         return False
-
-    #     return True
+    @abstractmethod
+    def generate_signal(self):
+        raise NotImplementedError

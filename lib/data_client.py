@@ -244,7 +244,7 @@ class DataClient(DataBaseClient):
 
             if len(df) > number_of_candles:
                 df = df.drop(df.index[0])
-                logger.info("Data is too long removing one")
+                # logger.info("Data is too long removing one")
 
             return df, stale_data, updated_data
 
