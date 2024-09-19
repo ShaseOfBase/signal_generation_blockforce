@@ -1379,3 +1379,842 @@ The server responded with: {'ok': False, 'error': 'not_authed'}
 2024-07-11 22:37:41 - lib.data_client - INFO - Initialized DB Connections
 2024-07-11 22:37:52 - lib.data_client - INFO - Successfully Fetched Historical Data
 2024-07-11 22:37:56 - lib.data_client - INFO - Added hour datapoint
+2024-07-11 22:49:25 - lib.data_client - INFO - Initialized DB Connections
+2024-07-11 22:49:36 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-07-11 22:49:40 - lib.data_client - INFO - Didn't add hour datapoint
+2024-09-16 17:38:36 - lib.data_client - INFO - Initialized DB Connections
+2024-09-16 17:38:51 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-09-16 17:38:55 - lib.data_client - INFO - Didn't add hour datapoint
+2024-09-16 17:39:08 - lib.data_client - INFO - Didn't add hour datapoint
+2024-09-16 17:39:21 - lib.data_client - INFO - Didn't add hour datapoint
+2024-09-16 17:39:34 - lib.data_client - INFO - Didn't add hour datapoint
+2024-09-16 17:39:47 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:40:00 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:40:13 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:40:26 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:40:39 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:40:51 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:41:04 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:41:18 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:41:31 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:41:44 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:41:56 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:42:09 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:42:22 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:42:36 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:42:49 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:43:02 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:43:15 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:43:27 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:43:40 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:43:53 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:44:06 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:44:19 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:44:32 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:44:45 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:44:58 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:45:11 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:45:24 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:45:37 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:45:50 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:46:04 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:46:17 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:46:30 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:46:43 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:46:56 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:47:09 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:47:21 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:47:34 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:47:47 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:48:00 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:48:13 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:48:26 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:48:39 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:48:52 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:49:05 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:49:18 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:49:31 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:49:44 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:49:57 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:50:10 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:50:23 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:50:36 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:50:49 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:51:02 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:51:15 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:51:28 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:51:41 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:51:54 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:52:07 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:52:20 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:52:33 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:52:46 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:52:59 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:53:12 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:53:25 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:53:38 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:53:51 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:54:04 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:54:17 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:54:30 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:54:43 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:54:56 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:55:09 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:55:22 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:55:35 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:55:48 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:56:01 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 17:56:14 - lib.data_client - INFO - Added hour datapoint
+2024-09-16 18:06:11 - lib.data_client - INFO - Initialized DB Connections
+2024-09-16 18:06:50 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-09-16 18:06:54 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:06:54 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:06:54 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:06:54 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:06:55 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:06:55 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:06:57 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:06:58 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:06:58 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:06:58 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:06:58 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:12:33 - lib.data_client - INFO - Initialized DB Connections
+2024-09-16 18:12:49 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-09-16 18:12:53 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:12:53 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:12:53 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:12:53 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:12:54 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:12:54 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:12:56 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:12:57 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:12:57 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:12:57 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:12:57 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:12:57 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:00 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:13:00 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:13:00 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:13:00 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:13:01 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:01 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:03 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:13:04 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:13:04 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:13:04 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:13:04 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:04 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:07 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:13:07 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:13:07 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:13:07 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:13:07 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:08 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 115, in send_message
+    self.slack_client.chat_postMessage(channel=internal_channel, text=msg)
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 2664, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/chat.postMessage)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:13:10 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:13:10 - lib.logger - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2024-09-16 18:13:10 - lib.strategy_client - INFO - No channel specified, logging msg only...
+2024-09-16 18:13:10 - lib.strategy_client - INFO - Error in main loop: cannot unpack non-iterable NoneType object
+2024-09-16 18:13:11 - lib.strategy_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/main.py", line 52, in generate_signals
+    signal_generator.generate_signal()
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 98, in generate_signal
+    go = self.update_data()
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/strategy_clients/psar_client/psar_client.py", line 78, in update_data
+    self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/strategy_client.py", line 103, in send_message
+    res = self.slack_client.conversations_list(types="public_channel")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/client.py", line 3078, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 157, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 188, in _sync_send
+    return self._urllib_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/base_client.py", line 319, in _urllib_api_call
+    ).validate()
+      ^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+
+2024-09-16 18:35:18 - lib.data_client - INFO - Initialized DB Connections
+2024-09-16 18:35:35 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-09-16 18:38:10 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:38:55 - lib.data_client - ERROR - Traceback (most recent call last):
+  File "/home/travis/dev_projects/signal_generation_travis/lib/data_client.py", line 237, in update_candles
+    df = df.drop(columns=["datetime"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/travis/dev_projects/signal_generation_travis/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['datetime'] not found in axis"
+
+2024-09-16 18:39:54 - lib.data_client - INFO - Initialized DB Connections
+2024-09-16 18:40:40 - lib.data_client - INFO - Successfully Fetched Historical Data
+2024-09-16 18:41:01 - lib.data_client - INFO - Didn't add hour datapoint

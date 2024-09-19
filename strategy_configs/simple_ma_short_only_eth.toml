@@ -1,0 +1,11 @@
+# The run config defines the basic parameters for the backtest
+[meta]
+strategy_type = "simple_ma"
+timeframe = '1h'
+symbol = 'ETHUSDT'
+
+[strategy]
+directions = ["short"]
+use_regime = true
+# bull_regime_classes = [1, 2]
+# bear_regime_classes = [5, 6]

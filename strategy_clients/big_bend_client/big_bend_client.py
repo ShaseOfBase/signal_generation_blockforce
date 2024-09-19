@@ -60,10 +60,10 @@ class SignalGeneratorBigBend(StrategyClient):
             exit()
 
     def update_data(self) -> bool:
-        self.df_4h, stale_4h, updated_4h = self.data_client.update_hour_bars(
+        self.df_4h, stale_4h, updated_4h = self.data_client.update_candles(
             self.symbol, self.df_4h, 4 * 60, 51
         )
-        self.df_2h, stale_2h, updated_2h = self.data_client.update_hour_bars(
+        self.df_2h, stale_2h, updated_2h = self.data_client.update_candles(
             self.symbol, self.df_2h, 2 * 60, 7
         )
         self.df_db, stale_db, updated_db = self.data_client.update_bars_db(

@@ -1,0 +1,24 @@
+[portfolio_meta]
+description = "Simple strategies with regime filter"
+warmup_period_days = 365
+leverage = 1
+
+[strategy]
+regime_version = 'v1'
+
+[strategy_regimes]
+# These names should match the config names of the strategies in config/strategy_configs
+# simple_ma_long_only_btc = { regime_classes = [1, 2] }
+# simple_ma_long_only_eth = { regime_classes = [1, 2] }
+# simple_ma_short_only_btc = { regime_classes = [5, 6] }
+simple_ma_short_only_eth = { regime_classes = [5, 6] }
+# simple_macd_long_only_btc = { regime_classes = [1, 2, 3] }
+# simple_macd_long_only_eth = { regime_classes = [1, 2] }
+# simple_macd_short_only_btc = { regime_classes = [4, 5, 6] }
+simple_macd_short_only_eth = { regime_classes = [5, 6] }
+# simple_rsi_divergence_long_only_btc = { regime_classes = [1, 2, 3] }
+# simple_bbands_long_only_btc = { regime_classes = [2] }
+# simple_bbands_long_only_eth = { regime_classes = [2] }
+# simple_bbands_short_only_btc = { regime_classes = [5, 6] }
+simple_bbands_short_only_eth = { regime_classes = [5, 6] }
+simple_rsi_divergence_long_only_eth = { regime_classes = [1, 2] }

@@ -32,9 +32,9 @@ class YosemiteSignalSchema(BaseModel):
     depth_amount: typing.Optional[int] = None
     slippage: typing.Optional[float]
     text: typing.Optional[str] = None
-
     force: typing.Optional[bool] = False
     ignore_two_min_interval: typing.Optional[bool] = False
+    current_regime_class: typing.Optional[int] = None
 
 
 logger = logging.getLogger(__name__)
@@ -52,10 +52,12 @@ class StrategyClient(DataBaseClient):
         strategy_name: str,
         trade_type: str,
         perc_equity: float = None,
+        current_regime_class: int = None,
     ):
         """
         trade_type will be Entry Long, Entry Short, Exit Position
         """
+        logger.info(f"Sending signal to {system.name}")
 
         if get_dev_mode():
             logger.info("Signal generated, dev mode is on, logging only...")
@@ -74,9 +76,10 @@ class StrategyClient(DataBaseClient):
                 interval=str(uuid.uuid4()),  # not sure if this is needed
                 perc_equity=perc_equity,
                 ignore_two_min_interval=True,
+                current_regime_class=current_regime_class,
             )
 
-            signal_dict = signal.dict(exclude_none=True)
+            signal_dict = signal.model_dump(exclude_none=True)
             response = requests.post(url, json=signal_dict)
             return response
         except:
@@ -92,6 +95,11 @@ class StrategyClient(DataBaseClient):
         :innocent_cat:
         :grimacing_cat:
         """
+
+        if get_dev_mode():
+            logger.info(f"Dev mode enabled, not sending to slack")
+            logger.info(msg)
+            return
 
         if not channel:
             logger.info("No channel specified, logging msg only...")

@@ -195,7 +195,7 @@ class DataClient(DataBaseClient):
         # logger.info(f"Formatted Data \n {hour_bars.to_markdown()}")
         return hour_bars
 
-    def update_hour_bars(
+    def update_candles(
         self,
         symbol: str,
         df: DataFrame,
@@ -215,7 +215,10 @@ class DataClient(DataBaseClient):
                 limit = candle_length_minutes
                 db_candle_length = 1
 
-            query = f"SELECT * FROM candle WHERE symbol = '{symbol}' AND kind = '{db_candle_length}m' ORDER BY close_datetime DESC LIMIT {limit}"
+            query = (
+                f"SELECT * FROM candle WHERE symbol = '{symbol}' "
+                f"AND kind = '{db_candle_length}m' ORDER BY close_datetime DESC LIMIT {limit}"
+            )
 
             query_df = pd.read_sql(query, session.bind)
 
@@ -229,7 +232,13 @@ class DataClient(DataBaseClient):
                 requested_data_duration=candle_length_minutes,
             )
 
-            is_different = not (df.tail(1).isin(formatted_df).all(axis=1).any())
+            # is_different = not (df.tail(1).isin(formatted_df).all(axis=1).any())
+            # Drop datetime to align with formatted_df
+            if "datetime" in df.columns:
+                df = df.drop(columns=["datetime"])
+            is_different = not formatted_df.empty and not df.tail(1).equals(
+                formatted_df
+            )
 
             if not formatted_df.empty and not stale_data and is_different:
                 df = pd.concat([df, formatted_df])
@@ -238,9 +247,10 @@ class DataClient(DataBaseClient):
                     tz=datetime.timezone.utc
                 )
                 updated_data = True
+                logger.info(f"Updated Data: {df.tail(1).to_markdown()}")
             else:
                 pass
-                logger.info("Didn't add hour datapoint")
+                # logger.info("Didn't add hour datapoint")
 
             if len(df) > number_of_candles:
                 df = df.drop(df.index[0])

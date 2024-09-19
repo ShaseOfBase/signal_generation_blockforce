@@ -75,7 +75,7 @@ class SignalGeneratorPsar(StrategyClient):
             exit()
 
     def update_data(self) -> bool:
-        self.df_1m, stale_1m, updated_1m = self.data_client.update_hour_bars(
+        self.df_1m, stale_1m, updated_1m = self.data_client.update_candles(
             self.symbol, self.df_1m, 1, 5
         )
 
