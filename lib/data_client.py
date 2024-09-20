@@ -9,40 +9,37 @@ from pandas import DataFrame
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
-from lib.models import System
+from lib.models import SystemConfig
 
 logger = logging.getLogger(__name__)
 
 
 class DataBaseClient:
-    def __init__(self, systems: typing.List[System]):
-        self.systems = systems
+    def __init__(self, system_config: SystemConfig):
+        self.system_config = system_config
         self._init_db_connections()
 
     def _init_db_connections(self):
         self.db_handler = {}
 
-        for x in self.systems:
-            engine = create_engine(x.db_url, pool_pre_ping=True)
-            session_maker = sessionmaker(bind=engine)
-            self.db_handler[x.name] = {
-                "session_maker": session_maker,
-                "session": None,
-            }
+        engine = create_engine(self.system_config.db_url, pool_pre_ping=True)
+        session_maker = sessionmaker(bind=engine)
+        self.db_handler = {
+            "session_maker": session_maker,
+            "session": None,
+        }
 
         logger.info("Initialized DB Connections")
 
     def get_session(self, session_name: str):
-        session = self.db_handler[session_name]["session"]
-        if session is None or not self.is_session_alive(session_name):
-            self.db_handler[session_name]["session"] = self.db_handler[session_name][
-                "session_maker"
-            ]()
+        session = self.db_handler["session"]
+        if session is None or not self.is_session_alive():
+            self.db_handler["session"] = self.db_handler["session_maker"]()
 
-        return self.db_handler[session_name]["session"]
+        return self.db_handler["session"]
 
-    def is_session_alive(self, session_name: str):
-        session = self.db_handler[session_name]["session"]
+    def is_session_alive(self):
+        session = self.db_handler["session"]
         try:
             session.execute(text("SELECT 1"))
             return True
@@ -52,19 +49,22 @@ class DataBaseClient:
 
 
 class DataClient(DataBaseClient):
-    def __init__(self, systems: dict):
-        super().__init__(systems)
+    def __init__(self, system_config: SystemConfig):
+        super().__init__(system_config)
         self.last_update_time = None
         self.stale_threshold_seconds = 120  # two minute late data is stale
 
     ###### Time Based Bars #######
 
     def get_historical_data(
-        self, symbol: str, candle_length_minutes: int, number_of_candles: int
-    ) -> DataFrame:
+        self,
+        symbol: str,
+        candle_length_minutes: int,
+        number_of_candles: int,
+        system_name: str,
+    ) -> typing.Optional[DataFrame]:
         try:
-
-            session = self.get_session("research")
+            session = self.get_session(system_name)
 
             # If you want hourly candles, then we will use the 30m candles from DB to make
             if candle_length_minutes % 30 == 0:

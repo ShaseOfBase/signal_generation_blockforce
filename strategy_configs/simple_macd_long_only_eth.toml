@@ -1,9 +1,9 @@
 # The run config defines the basic parameters for the backtest
 [meta]
-strategy_name = "simple_ma"
+strategy_name = "simple_macd"
 timeframe = '1h'
 symbol = 'ETHUSDT'
 
 [strategy]
-directions = ["short"]
+directions = ["long"]
 use_regime = true

@@ -10,9 +10,9 @@ import slack_sdk
 from config import SLACK_TOKEN
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-from lib.data_client import DataBaseClient
+from lib.data_client import DataBaseClient, DataClient
 from lib.dev_mode import get_dev_mode
-from lib.models import System
+from lib.models import StrategyConfig, SystemConfig
 
 # from trading_app_helpers.crud import crud_get_alloc
 
@@ -35,24 +35,45 @@ class YosemiteSignalSchema(BaseModel):
     force: typing.Optional[bool] = False
     ignore_two_min_interval: typing.Optional[bool] = False
     current_regime_class: typing.Optional[int] = None
+    sl_stop: typing.Optional[float] = None
+    tp_stop: typing.Optional[float] = None
 
 
 logger = logging.getLogger(__name__)
 
 
 class StrategyClient(DataBaseClient):
-    def __init__(self, systems: typing.List[System]):
-        super().__init__(systems=systems)
-        self.systems = systems
+    first_update = True
+
+    def __init__(
+        self,
+        strategy_name: str,
+        data_client: DataClient,
+        symbol: str,
+        system_configs: typing.List[SystemConfig],
+        strategy_config: StrategyConfig,
+    ):
+        super().__init__(system_config=system_configs[0])
         self.slack_client = slack_sdk.WebClient(token=SLACK_TOKEN)
+        self.strategy_name = strategy_name
+        self.data_client = data_client
+        self.symbol = symbol
+        self.system_configs = system_configs
+        self.strategy_config = strategy_config
+        self.df_1h = None
+        self.stale_data = False
+
+        self.strategy_params = strategy_config.strategy
 
     def send_signal(
         self,
-        system: System,
+        system: SystemConfig,
         strategy_name: str,
         trade_type: str,
         perc_equity: float = None,
         current_regime_class: int = None,
+        sl_stop: float = None,
+        tp_stop: float = None,
     ):
         """
         trade_type will be Entry Long, Entry Short, Exit Position
@@ -77,6 +98,8 @@ class StrategyClient(DataBaseClient):
                 perc_equity=perc_equity,
                 ignore_two_min_interval=True,
                 current_regime_class=current_regime_class,
+                sl_stop=sl_stop,
+                tp_stop=tp_stop,
             )
 
             signal_dict = signal.model_dump(exclude_none=True)

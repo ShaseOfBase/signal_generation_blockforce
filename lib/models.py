@@ -27,18 +27,34 @@ class YosemiteSignalSchema(BaseModel):
     ignore_two_min_interval: Optional[bool] = False
 
 
-@dataclass
-class System:
+class SystemConfig(BaseModel):
     name: str
-    db_url: str = None
-    trading_url: str = None
-    accounts: List[str] = None
+    db_url: Optional[str] = None
+    trading_url: Optional[str] = None
+
+    @classmethod
+    def from_name(cls, name: str) -> SystemConfig:
+        system_config_path = PathManager.system_configs_path / f"{name}.toml"
+        with open(system_config_path, "rb") as f:
+            toml_data = tomllib.load(f)
+
+            db_user = toml_data["db"]["user"]
+            db_pass = toml_data["db"]["pass"]
+            db_host = toml_data["db"]["host"]
+            db_port = toml_data["db"]["port"]
+            db_name = toml_data["db"]["name"]
+
+            toml_data["db_url"] = (
+                f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
+            )
+
+            toml_data.pop("db")
+
+            return cls.model_validate(toml_data)
 
 
 class PortfolioMeta(BaseModel):
     description: str
-    warmup_period_days: int
-    leverage: float
 
 
 class PortfolioConfig(BaseModel):
@@ -55,8 +71,14 @@ class PortfolioConfig(BaseModel):
             return cls.model_validate(toml_data)
 
 
+class StrategyMeta(BaseModel):
+    strategy_name: str
+    timeframe: str
+    symbol: str
+
+
 class StrategyConfig(BaseModel):
-    meta: dict
+    meta: StrategyMeta
     strategy: dict
     file_name: Optional[str] = None
 

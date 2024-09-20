@@ -61,7 +61,7 @@ def apply_regime_filter_to_trigger_data(
         # Change long entries to False if regime is not in bull classes from instance params
         long_entries_regime_df.loc[
             ~long_entries_regime_df.regime_class.isin(
-                strategy_instance_params["bull_regime_classes"]
+                strategy_instance_params["regime_classes"]
             ),
             "long_entries",
         ] = False
@@ -79,7 +79,7 @@ def apply_regime_filter_to_trigger_data(
 
         long_exits_regime_df.loc[
             ~long_exits_regime_df.regime_class.isin(
-                strategy_instance_params["bull_regime_classes"]
+                strategy_instance_params["regime_classes"]
             ),
             "long_exits",
         ] = True
@@ -94,11 +94,10 @@ def apply_regime_filter_to_trigger_data(
                 ),
             },
         )
-        long_entries = long_entries_regime_df.long_entries
 
         short_entries_regime_df.loc[
             ~short_entries_regime_df.regime_class.isin(
-                strategy_instance_params["bear_regime_classes"]
+                strategy_instance_params["regime_classes"]
             ),
             "short_entries",
         ] = False
@@ -116,7 +115,7 @@ def apply_regime_filter_to_trigger_data(
 
         short_exits_regime_df.loc[
             ~short_exits_regime_df.regime_class.isin(
-                strategy_instance_params["bear_regime_classes"]
+                strategy_instance_params["regime_classes"]
             ),
             "short_exits",
         ] = True

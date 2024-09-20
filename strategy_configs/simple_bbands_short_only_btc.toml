@@ -1,8 +1,8 @@
 # The run config defines the basic parameters for the backtest
 [meta]
-strategy_name = "simple_ma"
+strategy_name = "simple_bbands"
 timeframe = '1h'
-symbol = 'ETHUSDT'
+symbol = 'BTCUSDT'
 
 [strategy]
 directions = ["short"]

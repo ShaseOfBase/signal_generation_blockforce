@@ -8,7 +8,7 @@ import numpy as np
 
 from config import SLACK_CHANNEL
 from lib.data_client import DataClient
-from lib.models import System
+from lib.models import SystemConfig
 from lib.path_manager import PathManager
 from lib.strategy_client import StrategyClient
 from strategy_clients.psar_client.psar_signals import get_psar_signals_df
@@ -26,18 +26,18 @@ class SignalGeneratorPsar(StrategyClient):
 
     def __init__(
         self,
-        systems: List[System],
+        system_configs: List[SystemConfig],
         strategy_name: str,
         data_client: DataClient,
         symbol: str,
     ):
-        super().__init__(systems=systems)
+        super().__init__(system_config=system_configs[0])
         self.strategy_name = strategy_name
         self.data_client = data_client
         self.symbol = symbol
-        self.accounts = systems
         self.df_1m = None
         self.stale_data = False
+        self.system_configs = system_configs
 
         self.initialize_config()
         self.initialize_data()
@@ -56,6 +56,7 @@ class SignalGeneratorPsar(StrategyClient):
             symbol=self.symbol,
             candle_length_minutes=1,
             number_of_candles=43_202,  # 43_200 needed as base to establish all values, +2 makes sure we're in signal gen territory
+            system_name=self.system_config.name,
         )
 
         data = [self.df_1m]

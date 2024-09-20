@@ -42,22 +42,22 @@ class RegimeV1:
             regime_df["volatility"] > 1, "Above Avg", "Below Avg"
         )
 
-        fast_ma = daily_ohlcv_df["Close"].rolling(21).mean()
-        slow_ma = daily_ohlcv_df["Close"].rolling(88).mean()
+        fast_ma = daily_ohlcv_df["close"].rolling(21).mean()
+        slow_ma = daily_ohlcv_df["close"].rolling(88).mean()
 
-        bull_conditions = (daily_ohlcv_df["Close"] > fast_ma) & (
-            daily_ohlcv_df["Close"] > slow_ma
+        bull_conditions = (daily_ohlcv_df["close"] > fast_ma) & (
+            daily_ohlcv_df["close"] > slow_ma
         )
         sideways_conditions = (
-            (daily_ohlcv_df["Close"] >= fast_ma)
-            & (daily_ohlcv_df["Close"] <= slow_ma)
+            (daily_ohlcv_df["close"] >= fast_ma)
+            & (daily_ohlcv_df["close"] <= slow_ma)
         ) | (
-            (daily_ohlcv_df["Close"] <= fast_ma)
-            & (daily_ohlcv_df["Close"] >= slow_ma)
+            (daily_ohlcv_df["close"] <= fast_ma)
+            & (daily_ohlcv_df["close"] >= slow_ma)
         )
 
-        bear_conditions = (daily_ohlcv_df["Close"] < fast_ma) & (
-            daily_ohlcv_df["Close"] < slow_ma
+        bear_conditions = (daily_ohlcv_df["close"] < fast_ma) & (
+            daily_ohlcv_df["close"] < slow_ma
         )
 
         regime_df["trend_class"] = np.select(

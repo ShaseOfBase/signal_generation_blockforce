@@ -5,5 +5,5 @@ timeframe = '1h'
 symbol = 'ETHUSDT'
 
 [strategy]
-directions = ["short"]
+directions = ["long"]
 use_regime = true

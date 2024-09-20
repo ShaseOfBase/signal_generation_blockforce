@@ -5,7 +5,7 @@ import pandas as pd
 from pandas import DataFrame
 from config import SLACK_CHANNEL
 from lib.data_client import DataClient
-from lib.models import System
+from lib.models import SystemConfig
 from lib.strategy_client import StrategyClient
 
 logger = logging.getLogger(__name__)
@@ -24,16 +24,16 @@ class SignalGeneratorBigBend(StrategyClient):
 
     def __init__(
         self,
-        systems: List[System],
+        systems: List[SystemConfig],
         strategy_name: str,
         data_client: DataClient,
         symbol: str,
     ):
-        super().__init__(systems=systems)
+        super().__init__(system_config=systems[0])
+        self.system_config = systems[0]
         self.strategy_name = strategy_name
         self.data_client = data_client
         self.symbol = symbol
-        self.accounts = systems
         self.df_4h = None
         self.df_db = None
         self.stale_data = False
@@ -42,10 +42,16 @@ class SignalGeneratorBigBend(StrategyClient):
 
     def initialize_data(self):
         self.df_4h = self.data_client.get_historical_data(
-            symbol=self.symbol, candle_length_minutes=4 * 60, number_of_candles=51
+            system_name=self.system_config.name,
+            symbol=self.symbol,
+            candle_length_minutes=4 * 60,
+            number_of_candles=51,
         )
         self.df_2h = self.data_client.get_historical_data(
-            symbol=self.symbol, candle_length_minutes=2 * 60, number_of_candles=7
+            system_name=self.system_config.name,
+            symbol=self.symbol,
+            candle_length_minutes=2 * 60,
+            number_of_candles=7,
         )
         self.df_db = self.data_client.get_historical_data_db(
             symbol=self.symbol, db_value=90_000_000, number_of_bars=201

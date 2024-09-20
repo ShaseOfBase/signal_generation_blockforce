@@ -2,8 +2,8 @@
 [meta]
 strategy_name = "simple_ma"
 timeframe = '1h'
-symbol = 'ETHUSDT'
+symbol = 'BTCUSDT'
 
 [strategy]
-directions = ["short"]
+directions = ["long"]
 use_regime = true
