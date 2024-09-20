@@ -8,8 +8,7 @@ from typing import List
 
 from config import SLACK_CHANNEL
 from lib.dev_mode import set_dev_mode
-from lib.logger import setup_logging
-from lib.logger import logger
+from lib.logger import get_logger_instance
 from lib.data_client import DataClient
 from lib.strategy_client import StrategyClient
 from lib.models import PortfolioConfig, StrategyConfig, SystemConfig
@@ -27,19 +26,20 @@ from strategy_clients.simple_strategies.simple_rsi_divergence_client import (
     SignalGeneratorSimpleRsiDivergence,
 )
 
+logger = get_logger_instance(__name__)
+
 
 def get_signal_generator(
     strategy_config: StrategyConfig,
     data_client: DataClient,
     systems_configs: List[SystemConfig],
 ) -> StrategyClient:
-    setup_logging(strategy_config.meta.strategy_name)
 
-    strategy_type = strategy_config.meta.strategy_name
+    strategy_type = strategy_config.meta.strategy_type
 
     # TODO - do this in a less hard-coded way
     if strategy_type == "psar":
-        signal_generator_cls = SignalGeneratorPsar
+        raise NotImplementedError("PSAR not implemented")
     elif strategy_type == "simple_rsi_divergence":
         signal_generator_cls = SignalGeneratorSimpleRsiDivergence
     elif strategy_type == "simple_macd":
@@ -51,12 +51,15 @@ def get_signal_generator(
     else:
         raise ValueError(f"Invalid strategy type: {strategy_type}")
 
+    logger = get_logger_instance(strategy_config.strategy_name)
+
     signal_gen_kwargs = dict(
         system_configs=systems_configs,
-        strategy_name=strategy_config.meta.strategy_name,
+        strategy_name=strategy_config.strategy_name,
         data_client=data_client,
         symbol=strategy_config.meta.symbol,
         strategy_config=strategy_config,
+        logger=logger,
     )
 
     return signal_generator_cls(**signal_gen_kwargs)
@@ -91,7 +94,7 @@ async def main(system_names: List[str], pf_name: str):
 
     tasks = []
     for strategy_config_name, strategy_params in active_pf.strategy_regimes.items():
-        logger.info(f"Generating signals for {strategy_config_name}")
+        logger.info(f"Initializing strategy {strategy_config_name}...")
         dc = DataClient(system_config=system_configs[0])
         strategy_config = StrategyConfig.from_name(strategy_config_name)
         strategy_config.set_strategy_params(strategy_params)

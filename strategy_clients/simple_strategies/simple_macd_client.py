@@ -10,9 +10,6 @@ from lib.regimes.regime_manager import apply_regime_filter_to_trigger_data
 from lib.strategy_client import StrategyClient
 
 
-logger = logging.getLogger(__name__)
-
-
 class SignalGeneratorSimpleMacd(StrategyClient):
     """
     Signal generator for the Simple Moving Average strategy
@@ -32,6 +29,7 @@ class SignalGeneratorSimpleMacd(StrategyClient):
         data_client: DataClient,
         symbol: str,
         strategy_config: StrategyConfig,
+        logger: logging.Logger,
     ):
         super().__init__(
             system_configs=system_configs,
@@ -39,6 +37,7 @@ class SignalGeneratorSimpleMacd(StrategyClient):
             data_client=data_client,
             symbol=symbol,
             strategy_config=strategy_config,
+            logger=logger,
         )
 
         self.initialize_data()
@@ -64,14 +63,14 @@ class SignalGeneratorSimpleMacd(StrategyClient):
         max_retries = 5
         if any(item is None for item in data) and retry_count < max_retries:
             msg = "Historical data fetching failed - retrying..."
-            logger.info(msg)
+            self.logger.info(msg)
             self.initialize_data(retry_count + 1)
         elif any(item is None for item in data):
             msg = (
                 f"Historical data fetching failed for {self.strategy_name} "
                 f"after {max_retries} retries - Exiting App"
             )
-            logger.error(msg)
+            self.logger.error(msg)
             self.send_message(self.strategy_name, msg, SLACK_CHANNEL)
             exit()
 
@@ -90,7 +89,7 @@ class SignalGeneratorSimpleMacd(StrategyClient):
             self.stale_data = True
             msg = f"Stale Data in Update Data | 1m Bar {stale_1h}"
             self.send_message(self.strategy_name, msg, SLACK_CHANNEL)
-            logger.error(msg)
+            self.logger.error(msg)
         else:
             self.stale_data = False
 
@@ -108,10 +107,10 @@ class SignalGeneratorSimpleMacd(StrategyClient):
         go = self.update_data()
 
         if not go:
-            logger.info("Data not updated, waiting....")
+            self.logger.info("Data not updated, waiting....")
             return
 
-        logger.info(f"Running signal generation for {self.strategy_name}")
+        self.logger.info(f"Running signal generation for {self.strategy_name}")
 
         macd = vbt.MACD.run(
             self.df_1h.close, fast_window=12, slow_window=26, signal_window=9
@@ -207,7 +206,7 @@ class SignalGeneratorSimpleMacd(StrategyClient):
             trade_type = None
 
         if trade_type is not None:
-            logger.info(f"{self.strategy_name} signal generated: {trade_type}")
+            self.logger.info(f"{self.strategy_name} signal generated: {trade_type}")
 
             for system in self.system_configs:
                 self.send_signal(

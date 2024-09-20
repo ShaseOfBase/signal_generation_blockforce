@@ -72,7 +72,7 @@ class PortfolioConfig(BaseModel):
 
 
 class StrategyMeta(BaseModel):
-    strategy_name: str
+    strategy_type: str
     timeframe: str
     symbol: str
 
@@ -80,19 +80,25 @@ class StrategyMeta(BaseModel):
 class StrategyConfig(BaseModel):
     meta: StrategyMeta
     strategy: dict
+    strategy_name: str
     file_name: Optional[str] = None
 
     def set_strategy_params(self, strategy_params: dict):
         self.strategy = {**self.strategy, **strategy_params}
 
     @classmethod
-    def from_name(cls, name: str) -> StrategyConfig:
-        strategy_config_path = PathManager.strategy_configs_path / f"{name}.toml"
+    def from_name(cls, strategy_name: str) -> StrategyConfig:
+        strategy_config_path = (
+            PathManager.strategy_configs_path / f"{strategy_name}.toml"
+        )
         if not strategy_config_path.exists():
             raise FileNotFoundError(
                 f"Strategy config file not found: {strategy_config_path}"
             )
+
         with open(strategy_config_path, "rb") as f:
             toml_data = tomllib.load(f)
             toml_data["file_name"] = strategy_config_path.stem
+            toml_data["strategy_name"] = strategy_name
+
             return cls.model_validate(toml_data)

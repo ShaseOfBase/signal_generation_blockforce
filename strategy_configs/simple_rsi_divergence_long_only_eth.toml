@@ -1,6 +1,6 @@
 # The run config defines the basic parameters for the backtest
 [meta]
-strategy_name = "simple_rsi_divergence"
+strategy_type = "simple_rsi_divergence"
 timeframe = '1h'
 symbol = 'ETHUSDT'
 

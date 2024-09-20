@@ -1,6 +1,6 @@
 # The run config defines the basic parameters for the backtest
 [meta]
-strategy_name = "simple_macd"
+strategy_type = "simple_macd"
 timeframe = '1h'
 symbol = 'ETHUSDT'
 
